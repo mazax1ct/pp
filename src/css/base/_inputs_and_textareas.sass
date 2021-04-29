@@ -1,0 +1,54 @@
+.input-label
+  display: block
+  margin-bottom: 10px
+
+.input,
+.textarea
+  background-color: #fff
+  border: 1px solid $grey_color
+  border-radius: 0
+  color: $text_color
+  font-size: 16px
+  font-weight: 300
+  line-height: 1.5
+  transition: border-color 0.3s, padding 0.3s
+  width: 100%
+
+  &:focus
+    border-color: $text_color
+
+  &.error
+    border-color: $red_color
+
+    &:focus
+      border-color: $red_color
+
+  &:disabled,
+  &.disabled
+    background-color: $grey_color
+
+  &::-webkit-input-placeholder
+    color: rgba($text_color, 0.3)
+    opacity: 1
+
+  &::-moz-placeholder
+    color: rgba($text_color, 0.3)
+    opacity: 1
+
+  &:-ms-input-placeholder
+    color: rgba($text_color, 0.3)
+    opacity: 1
+
+.input
+  height: 38px
+  padding: 8px 16px 6px
+
+.textarea
+  height: 130px
+  padding: 8px 16px
+  resize: none
+
+input,
+textarea
+  &:focus
+    outline: none
