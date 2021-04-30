@@ -1,2 +1,66 @@
 .footer
   background-color: rgba($grey_color, 0.3)
+  font-size: 16px
+  padding-top: 30px
+  padding-bottom: 24px
+  text-align: center
+
+  @media(min-width: 1024px)
+    text-align: left
+
+  &__container
+    @media(min-width: 1024px)
+      display: flex
+      justify-content: space-between
+      position: relative
+
+  &__logo
+    margin-bottom: 24px
+
+    @media(min-width: 1024px)
+      left: 50%
+      margin-bottom: 0
+      position: absolute
+      transform: translateX(-50%)
+      top: 44px
+      z-index: 1
+
+  &__menu
+    @media(min-width: 1024px)
+      margin-bottom: 0
+      order: 1
+
+    li
+      &:not(:last-child)
+        margin-bottom: 10px
+
+    a
+      text-decoration: none
+
+  &__contacts
+    margin-bottom: 24px
+
+    @media(min-width: 1024px)
+      margin-bottom: 0
+      order: 2
+      text-align: right
+
+    p
+      @media(min-width: 1900px)
+        margin-bottom: 24px
+
+      &:last-child
+        margin-bottom: 0
+
+    a
+      text-decoration: none
+
+  &__copyright
+    font-size: 14px
+
+    @media(min-width: 1024px)
+      left: 50%
+      position: absolute
+      transform: translateX(-50%)
+      top: 96px
+      z-index: 1

@@ -1,0 +1,23 @@
+.phone,
+.email
+  align-items: center
+  display: inline-flex
+  text-decoration: none
+  vertical-align: middle
+
+  &:hover,
+  &:focus,
+  &:active
+    svg
+      fill: $brand_color
+
+  svg
+    fill: $text_color
+    height: 21px
+    margin-right: 10px
+    transition: fill 0.3s
+    width: 21px
+
+.email
+  svg
+    margin-top: 2px

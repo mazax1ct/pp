@@ -13,10 +13,10 @@
   height: 38px
   justify-content: center
   line-height: 1.5
-  padding: 8px 16px 6px
+  padding: 6px 16px 8px
   text-decoration: none
   text-align: center
-  transition: background-color 0.3s, border-color 0.3s
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s
   vertical-align: middle
 
   &:hover,
@@ -47,10 +47,13 @@
     fill: #fff
     height: 7px
     margin-left: 11px
-    width: 16px
+    margin-top: 2px
+    transition: fill 0.3s
+    width: 18px
 
   &--bordered
     background-color: transparent
+    color: $text_color
 
     .arrow
       fill: $text_color

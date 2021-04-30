@@ -1,0 +1,43 @@
+.advantages
+  display: flex
+  flex-wrap: wrap
+  font-weight: 400
+  margin-left: -10px
+  margin-right: -10px
+  text-align: center
+
+  &__item
+    margin-bottom: 48px
+    padding-left: 10px
+    padding-right: 10px
+    width: 50%
+
+    @media(min-width: 540px)
+      width: 33.33333%
+
+    @media(min-width: 768px)
+      width: 25%
+
+    @media(min-width: 1024px)
+      margin-bottom: 68px
+      width: 20%
+
+    img
+      margin-bottom: 16px
+
+
+    &:nth-last-child(1),
+    &:nth-last-child(2)
+      margin-bottom: 0
+
+    &:nth-last-child(3)
+      @media(min-width: 540px)
+        margin-bottom: 0
+
+    &:nth-last-child(4)
+      @media(min-width: 768px)
+        margin-bottom: 0
+
+    &:nth-last-child(5)
+      @media(min-width: 1024px)
+        margin-bottom: 0

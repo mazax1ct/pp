@@ -1,0 +1,86 @@
+.reviews
+  display: flex
+  flex-wrap: wrap
+  margin-left: -12px
+  margin-right: -12px
+
+  &.slick-initialized
+    display: block
+
+    .slick-track
+      display: flex
+
+    .slick-slide
+      display: flex
+      justify-content: center
+      height: auto
+
+      & > div
+        height: auto
+
+    .reviews__slide
+      height: 100%
+      margin-bottom: 0
+
+  &__slide
+    margin-bottom: 24px
+    padding-left: 12px
+    padding-right: 12px
+    width: 50%
+
+  .slick-arrow
+    background-color: $text_color
+
+    &:hover,
+    &:focus
+      .slick-arrow__arrow
+        fill: #fff
+
+    &.slick-disabled
+      opacity: 0.5
+
+      &:hover,
+      &:focus
+        .slick-arrow__arrow
+          fill: #fff
+
+  .slick-arrow__arrow
+    fill: #fff
+
+.review
+  background-color: #fff
+  height: 100%
+  max-width: 600px
+  margin-left: auto
+  margin-right: auto
+  padding: 36px
+
+  @media(min-width: 1200px)
+    padding: 36px 56px
+
+  &__number
+    margin-bottom: 20px
+
+  &__inner
+    @media(min-width: 768px)
+      display: flex
+
+
+  &__picture
+    margin-bottom: 16px
+    min-width: 72px
+    width: 72px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+  &__text
+    @media(min-width: 768px)
+      padding-left: 30px
+
+  &__author
+    font-weight: 400
+    text-align: right
+
+    @media(min-width: 1024px)
+      font-size: 18px

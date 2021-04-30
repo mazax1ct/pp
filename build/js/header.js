@@ -6,6 +6,12 @@ var resize_scroll = function(e) {
   } else {
     h.removeClass("scrolled");
   }
+
+  if($(window).scrollTop() > h.height()*2) {
+    h.addClass("full-scrolled");
+  } else {
+    h.removeClass("full-scrolled");
+  }
 };
 
 $(document).ready(function() {
@@ -30,4 +36,10 @@ $(document).on('click', '.js-menu-toggler', function () {
   }
 
   return false;
+});
+
+$(document).on('click', '.main-menu__link', function () {
+  $('.js-menu-toggler').removeClass('is-active');
+  $('body').removeClass('menu-open');
+  $('.header__menu-block').removeClass('is-open');
 });

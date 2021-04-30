@@ -163,6 +163,8 @@
   justify-content: center;
   position: absolute;
   padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
   transition: background-color 0.3s;
   width: 45px;
   z-index: 1;
@@ -172,15 +174,26 @@
       fill: $brand_color;
     }
   }
+
+  &.slick-disabled {
+    cursor: default;
+    opacity: 0.8;
+
+    &:hover {
+      .slick-arrow__arrow {
+        fill: $text_color;
+      }
+    }
+  }
 }
 
 .slick-prev {
-  left: 0;
+  left: -10px;
 }
 
 .slick-next {
   left: auto;
-  right: 0;
+  right: -10px;
 }
 
 .slick-arrow__arrow {

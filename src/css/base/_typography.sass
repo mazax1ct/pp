@@ -5,8 +5,11 @@ body
   font-weight: 300
   line-height: 1.5
 
-  @media(min-width: 1350px)
+  @media(min-width: 1024px)
     font-size: 16px
+
+  @media(min-width: 1900px)
+    font-size: 18px
 
 a
   color: $text_color
@@ -50,6 +53,7 @@ h1,.h1
 
 h2,.h2
   font-size: 24px
+  margin-bottom: 36px
   text-align: center
 
   @media(min-width: 1024px)
@@ -86,10 +90,10 @@ table,
 .table-responsive,
 .responsive-table
   margin-top: 0
-  margin-bottom: 16px
+  margin-bottom: 24px
 
   @media(min-width: 1900px)
-    margin-bottom: 24px
+    margin-bottom: 48px
 
   &:last-child
     margin-bottom: 0
@@ -140,3 +144,22 @@ img
   height: auto
   max-width: 100%
   vertical-align: top
+
+.bordered-block
+  border-top: 1px solid $grey_color
+  border-bottom: 1px solid $grey_color
+  font-size: 16px
+  font-weight: 400
+  max-width: 1074px
+  margin-left: auto
+  margin-right: auto
+  padding-top: 20px
+  padding-bottom: 20px
+  text-align: center
+
+  @media(min-width: 1024px)
+    font-size: 18px
+
+.columns
+  @media(min-width: 1900px)
+    font-size: 16px

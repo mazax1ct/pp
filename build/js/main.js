@@ -11,25 +11,60 @@ $.fancybox.defaults.i18n.en.PREV = "Назад";
 
 
 $(document).ready(function() {
-  //кастомный селект
-	$('.js-select').each(function() {
-   var $p = $(this).closest('.select-wrapper');
-   $(this).select2({
-		 minimumResultsForSearch: Infinity,
-     dropdownPosition: 'below',
-     dropdownParent: $p,
-     placeholder: $(this).attr('placeholder')
-   });
-	}).on("select2:open", function (e) {
-		var $p = $(this).closest('.select-wrapper');
-		$p.addClass('open');
-	}).on("select2:close", function (e) {
-		var $p = $(this).closest('.select-wrapper');
-		$p.removeClass('open');
-	});
-});
+	if($('.js-slider').length > 0) {
+		$('.js-slider').slick({
+		  dots: false,
+		  infinite: false,
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+			mobileFirst: true,
+			prevArrow: '<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_prev"/></svg></button>',
+			nextArrow: '<button class="slick-arrow slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_next"/></svg></button>',
+		  responsive: [
+				{
+		      breakpoint: 1023,
+		      settings: {
+		        slidesToShow: 4,
+		        slidesToScroll: 4
+		      }
+		    },
+				{
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 599,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    }
+		  ]
+		});
+	}
 
-$(document).on('click', '.tooltip-container__button', function () {
-	$(this).parent().find('.tooltip').toggleClass('is-open');
-	return false;
+	if($('.js-reviews').length > 0) {
+		$('.js-reviews').slick({
+			adaptiveHeight: true,
+		  dots: false,
+		  infinite: false,
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+			mobileFirst: true,
+			prevArrow: '<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_prev"/></svg></button>',
+			nextArrow: '<button class="slick-arrow slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_next"/></svg></button>',
+		  responsive: [
+				{
+		      breakpoint: 1023,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    }
+		  ]
+		});
+	}
 });

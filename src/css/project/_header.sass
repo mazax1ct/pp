@@ -7,8 +7,30 @@
   transition: box-shadow 0.3s
   z-index: 10
 
+  @media(min-width: 1024px)
+    min-height: 180px
+    position: static
+
   &.scrolled
     box-shadow: 0 0 10px 0 rgba($text_color, 0.3)
+
+    @media(min-width: 1024px)
+      box-shadow: none
+
+  &.full-scrolled
+    .header__menu-block
+      @media(min-width: 1024px)
+        box-shadow: 0 0 10px 0 rgba($text_color, 0.3)
+        background-color: #fff
+        left: 0
+        position: fixed
+        right: 0
+        top: 0
+        z-index: 10
+
+    .main-menu
+      @media(min-width: 1024px)
+        border-color: transparent
 
   &__container
     align-items: center
@@ -18,8 +40,8 @@
 
     @media(min-width: 1024px)
       display: block
-      padding-top: 39px
-      padding-bottom: 27px
+      padding-top: 38px
+      padding-bottom: 26px
 
   &__logo
     width: 240px
@@ -29,6 +51,7 @@
       margin-left: auto
       margin-right: auto
       max-width: 332px
+      width: 332px
 
     img
       display: block
@@ -115,7 +138,6 @@
       padding-bottom: 0
 
   &__socials
-    display: flex
     margin-left: -10px
     order: 3
 
@@ -124,9 +146,6 @@
       order: 1
 
     .social-link
-      margin-left: 6px
-      margin-right: 6px
-
       &:hover,
       &:focus,
       &:active
@@ -185,6 +204,6 @@
 
   &__link
     display: inline-block
-    padding-top: 12px
+    padding-top: 11px
     padding-bottom: 12px
     text-decoration: none
