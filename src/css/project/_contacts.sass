@@ -6,7 +6,7 @@
     margin-right: -12px
 
   &__form
-    max-width: 400px
+    max-width: 424px
     margin-bottom: 40px
 
     @media(min-width: 768px)
@@ -16,18 +16,26 @@
       width: 50%
 
   &__info
-    max-width: 610px
+    max-width: 634px
 
     @media(min-width: 768px)
       padding-left: 12px
       padding-right: 12px
       width: 50%
 
+    @media(min-width: 1900px)
+      font-size: 16px
+
     .phone
       margin-right: 24px
 
     .socials
+      margin-top: -6px
       margin-left: -10px
+
+  p
+    @media(min-width: 1900px)
+      margin-bottom: 24px
 
 .contacts-form
   &__label
@@ -46,7 +54,7 @@
   &__button-block
     text-align: right
 
-.contacts__map
+.contacts-map
   background-color: $grey_color
   height: 330px
-  margin-bottom: 40px
+  margin-bottom: 24px

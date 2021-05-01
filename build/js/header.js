@@ -38,6 +38,7 @@ $(document).on('click', '.js-menu-toggler', function () {
   return false;
 });
 
+//навигация по ссылкам в меню
 $(document).on('click', '.main-menu__link', function () {
   $('.js-menu-toggler').removeClass('is-active');
   $('body').removeClass('menu-open');

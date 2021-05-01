@@ -11,6 +11,22 @@ $.fancybox.defaults.i18n.en.PREV = "Назад";
 
 
 $(document).ready(function() {
+	//слайдер акций
+	if($('.js-actions-slider').length > 0) {
+		$('.js-actions-slider').slick({
+			autoplay: true,
+			fade: true,
+			adaptiveHeight: true,
+			dots: true,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			mobileFirst: true,
+			arrows: false
+		});
+	}
+
+	//слайдер фотографий
 	if($('.js-slider').length > 0) {
 		$('.js-slider').slick({
 		  dots: false,
@@ -46,6 +62,7 @@ $(document).ready(function() {
 		});
 	}
 
+	//слайдер отзывов
 	if($('.js-reviews').length > 0) {
 		$('.js-reviews').slick({
 			adaptiveHeight: true,
@@ -67,4 +84,9 @@ $(document).ready(function() {
 		  ]
 		});
 	}
+});
+
+//навешивание класса на форму при поаытке отправки
+$(document).on('click', 'button[type=submit]', function () {
+	$(this).closest('form').addClass('submitted');
 });

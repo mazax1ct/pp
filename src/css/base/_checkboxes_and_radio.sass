@@ -5,7 +5,7 @@
   padding-left: 24px
 
   &:not(:last-child)
-    margin-bottom: 1.5em
+    margin-bottom: 24px
 
   &:focus
     outline: 1px dotted inherit
@@ -25,9 +25,12 @@
   height: 16px
   left: 0
   position: absolute
-  top: 0
+  top: 0.2em
   transition: border-color 0.3s
   width: 16px
+
+  @media(min-width: 1900px)
+    top: 0.25em
 
 .checkbox-icon
   border-radius: 2px
