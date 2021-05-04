@@ -28,11 +28,10 @@ $(document).on('click', '.js-menu-toggler', function () {
 
   if($(this).hasClass('is-active')) {
     $('body').addClass('menu-open');
-
-    $('.header__menu-block').addClass('is-open');
+    $('.header__menu-block').fadeIn();
   } else {
     $('body').removeClass('menu-open');
-    $('.header__menu-block').removeClass('is-open');
+    $('.header__menu-block').fadeOut();
   }
 
   return false;
@@ -42,5 +41,16 @@ $(document).on('click', '.js-menu-toggler', function () {
 $(document).on('click', '.main-menu__link', function () {
   $('.js-menu-toggler').removeClass('is-active');
   $('body').removeClass('menu-open');
-  $('.header__menu-block').removeClass('is-open');
+
+  if($('body').width() > 1023) {
+    $('.header__menu-block').removeClass('is-open');
+  } else {
+    $('.header__menu-block').fadeOut();
+  }
+
+  var id  = $(this).attr('href'),
+  top = $(id).offset().top - 50;
+  $('body, html').animate({scrollTop: top}, 1000);
+
+  return false;
 });

@@ -46,7 +46,7 @@ function init() {
 
   var body = document.querySelector('body');
   if (body.offsetWidth < 768) {
-    objectsMap.behaviors.disable('drag');
+    //objectsMap.behaviors.disable('drag');
     objectsMap.behaviors.enable('MultiTouch');
   }
 }

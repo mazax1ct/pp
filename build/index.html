@@ -234,8 +234,9 @@
 
         <p class="text-center">Оставьте номер телефона, и наш менеджер свяжется с Вами для уточнения всей информации.<br> *Минимальный заказ - 20 шт.</p>
 
+        <p class="text-center succsess"><b>Сообщение успешно отправлено!<br> Менеджер свяжется с вами в течение часа.</b></p>
         <form class="request-form" action="">
-          <input class="input" type="text" placeholder="8 (921) 346-69-78" required>
+          <input class="js-phone-mask input" type="text" placeholder="8 (921) 346-69-78" required>
           <button class="button" type="submit">Отправить <svg class="arrow"><use xlink:href="#arrow_next"></use></svg></button>
         </form>
       </div>
@@ -406,8 +407,9 @@
 
         <p class="text-center">Мы научим Вас как создавать сильные коллаборации и увеличивать стоимость Вашего бренда на 30%!<br> Не знаете как зарабатывать на мерче? Мы расскажем и создадим для Вас работающий мерч!<br> *Минимальный заказ - 20 шт.</p>
 
+        <p class="text-center warning"><b>Ой ой, что-нибудь случилось..<br> Попробуйте ещё раз.</b></p>
         <form class="request-form" action="">
-          <input class="input" type="text" placeholder="8 (921) 346-69-78" required>
+          <input class="js-phone-mask input" type="text" placeholder="8 (921) 346-69-78" required>
           <button class="button" type="submit">Заказать мерч <svg class="arrow"><use xlink:href="#arrow_next"></use></svg></button>
         </form>
       </div>
@@ -682,10 +684,10 @@
                 <input class="input" type="text" placeholder="Ваше имя" required>
               </label>
               <label class="contacts-form__label">
-                <input class="input" type="text" placeholder="E-mail" required>
+                <input class="js-email-mask input" type="text" placeholder="E-mail" required>
               </label>
               <label class="contacts-form__label">
-                <input class="input" type="text" placeholder="Номер телефона" required>
+                <input class="js-phone-mask input" type="text" placeholder="Номер телефона" required>
               </label>
               <label class="contacts-form__label">
                 <textarea class="textarea" placeholder="Ваше сообщение" required></textarea>
@@ -732,6 +734,8 @@
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/header.js"></script>
+  <script src="js/jquery.inputmask.min.js"></script>
+  <script src="js/inputmask-init.js"></script>
   <script src="js/main.js"></script>
   <script src="js/preloader.js"></script>
 

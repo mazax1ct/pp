@@ -22,6 +22,7 @@
       @media(min-width: 1024px)
         box-shadow: 0 0 10px 0 rgba($text_color, 0.3)
         background-color: #fff
+        bottom: auto
         left: 0
         position: fixed
         right: 0
@@ -105,21 +106,19 @@
         top: 6px
 
   &__menu-block
+    background-color: #fff
+    bottom: 0
     display: none
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 1
 
     @media(min-width: 1024px)
       display: block
       min-height: 50px
-
-    &.is-open
-      background-color: #fff
-      bottom: 0
-      display: block
-      left: 0
-      position: fixed
-      right: 0
-      top: 0
-      z-index: 1
+      position: static
 
   &__menu-block-inner
     display: flex
